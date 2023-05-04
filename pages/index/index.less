@@ -1,0 +1,57 @@
+view {
+    /* 使用预定义变量 */
+    color: var(--themeColor);
+}
+
+page {
+    background-color: #f4f4f4;
+}
+
+//轮播图样式
+.index_swiper {
+    swiper {
+        height: 340rpx;//让swiper的高度保持动态变化
+        navigator {
+            image  {
+              width:100%;
+            }
+        }
+    }    
+}
+
+//导航样式
+.index_cate {
+    display: flex;
+    navigator {
+        flex:1;
+        padding: 20rpx;
+        image {
+            width: 100%;        
+        }
+    }
+}
+//楼层样式
+.index_floor {
+    .floor_title {
+        image {
+            width: 100%;
+        }
+    }
+    .floor_group {
+        margin-top: 20rpx;
+        .floor_list {
+            margin: 0 0 0 10rpx;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 420rpx;
+            navigator {
+                width: 33.33%;
+                image {
+                    width: 100%;
+                    padding-right: 10rpx;
+                }
+            }
+        }
+    }
+}

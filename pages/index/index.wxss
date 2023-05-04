@@ -1,0 +1,43 @@
+view {
+  /* 使用预定义变量 */
+  color: var(--themeColor);
+}
+page {
+  background-color: #f4f4f4;
+}
+.index_swiper swiper {
+  height: 340rpx;
+}
+.index_swiper swiper navigator image {
+  width: 100%;
+}
+.index_cate {
+  display: flex;
+}
+.index_cate navigator {
+  flex: 1;
+  padding: 20rpx;
+}
+.index_cate navigator image {
+  width: 100%;
+}
+.index_floor .floor_title image {
+  width: 100%;
+}
+.index_floor .floor_group {
+  margin-top: 20rpx;
+}
+.index_floor .floor_group .floor_list {
+  margin: 0 0 0 10rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 420rpx;
+}
+.index_floor .floor_group .floor_list navigator {
+  width: 33.33%;
+}
+.index_floor .floor_group .floor_list navigator image {
+  width: 100%;
+  padding-right: 10rpx;
+}
