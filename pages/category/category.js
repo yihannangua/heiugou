@@ -95,15 +95,16 @@ Page({
   },
   //定义左侧菜单点击事件
   handleItemTap(e) {
+    console.log(e);
     const index = e.currentTarget.dataset.index;
     //构造右侧商品数据
-      let rightContent = this.catesList[index].children;
+    let rightContent = this.catesList[index].children;
 
-      this.setData({
-        currentIndex: index,   
-        rightContent,
-        //重新设置 右侧内容标签距离顶部的距离
-        scrollTop: 0
-      })
+    this.setData({
+      currentIndex: index,   
+      rightContent,
+      //重新设置 右侧内容标签距离顶部的距离
+      scrollTop: 0
+    })
   }
 })
