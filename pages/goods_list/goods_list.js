@@ -1,3 +1,5 @@
+const { request } = require("../../request/request");
+
 // pages/goods_list/goods_list.js
 Page({
 
@@ -21,7 +23,8 @@ Page({
         name:"价格",
         isActive: false
       }
-    ]
+    ],
+    
   },
 
   /**
@@ -29,54 +32,20 @@ Page({
    */
   onLoad(options) {
     console.log(options);
+    this.getGoodsList();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  //定义获取商品列表数据的方法
+  async getGoodsList() {
+    const res = await request({url:"/goods/search"});
+    console.log(res);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  //定义标题点击事件 从子组件传递过来
+  handleTabsItemChange(e) {
+    const {index} = e.detail;
+    let {tabs} = this.data;
+    tabs.forEach((v,i) => i===index ? v.isActive=true : v.isActive=false);
+    this.setData({
+      tabs
+    })
   }
 })
