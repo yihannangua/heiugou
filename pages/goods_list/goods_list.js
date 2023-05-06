@@ -24,20 +24,30 @@ Page({
         isActive: false
       }
     ],
-    
+    goodsList:{}
+  },
+  //接口需要的参数
+  QueryParams: {
+    query:"",
+    cid:"",
+    pagenum:1,
+    pagesize:10
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    console.log(options);
+    this.QueryParams.cid = options.cid;
     this.getGoodsList();
   },
   //定义获取商品列表数据的方法
   async getGoodsList() {
-    const res = await request({url:"/goods/search"});
+    const res = await request({url:"/goods/search",data:this.QueryParams});
     console.log(res);
+    this.setData({
+      goodsList:res.data.message.goods
+    })
   },
   //定义标题点击事件 从子组件传递过来
   handleTabsItemChange(e) {

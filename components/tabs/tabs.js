@@ -25,7 +25,6 @@ Component({
     //定义点击tabs事件
     handleItemTap(e) {
       const {index} = e.currentTarget.dataset;
-      console.log(index);
 
       this.triggerEvent("tabsItemChange",{index});
     }

@@ -6,6 +6,7 @@ export const request = (params) => {
         wx.request({
             // ...params,通过下方拼接方法，则不再需要展开
             url:baseUrl+params.url,
+            data:params.data,
             success:(res) => {
                 resolve(res);
             },

@@ -11,7 +11,6 @@
     </view>
     <view class="tabs_content">
         <slot>
-            
         </slot>
     </view>
 </view>
