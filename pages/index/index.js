@@ -12,6 +12,7 @@ Page({
     //楼层数组
     floorList: []
   },
+
   //options(Object)
   onLoad(options){
     //调用方法更新轮播图数据

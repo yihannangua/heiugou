@@ -8,16 +8,16 @@
     "miniprogram": {
       "list": [
         {
-          "name": "分类页面",
-          "pathName": "pages/category/category",
+          "name": "",
+          "pathName": "pages/goods_list/goods_list",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "商品列表页面",
-          "pathName": "pages/goods_list/goods_list",
-          "query": "cid=5",
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
           "launchMode": "default",
           "scene": null
         }

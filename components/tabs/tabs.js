@@ -7,8 +7,7 @@ Component({
     tabs: {
       type:Array,
       value:{}
-    },
-    currentIndex:0
+    }
   },
 
   /**
@@ -24,8 +23,8 @@ Component({
   methods: {
     //定义点击tabs事件
     handleItemTap(e) {
+      // console.log(e);
       const {index} = e.currentTarget.dataset;
-
       this.triggerEvent("tabsItemChange",{index});
     }
   }
