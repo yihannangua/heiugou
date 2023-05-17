@@ -8,16 +8,16 @@
     "miniprogram": {
       "list": [
         {
-          "name": "",
+          "name": "商品列表",
           "pathName": "pages/goods_list/goods_list",
-          "query": "",
+          "query": "cid=5",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "",
-          "pathName": "pages/index/index",
-          "query": "",
+          "name": "商品详情",
+          "pathName": "pages/goods_detail/goods_detail",
+          "query": "goods_id=43986",
           "launchMode": "default",
           "scene": null
         }

@@ -49,6 +49,7 @@ Page({
   //获取楼层数据
   async getFloorList() {
     const res = await request({url:"/home/floordata"});
+    console.log(res);
     this.setData({
       floorList: res.data.message
     });
