@@ -1,0 +1,43 @@
+<!-- 轮播图区域开始 -->
+<view class="detail_swiper">
+    <swiper class="swiper"
+    indicator-dots="true"
+    autoplay="true"
+    interval="5000"
+    circular="true">
+    <swiper-item class="swiper_item" 
+    item-id=""
+    wx:for="{{goodsObj.pics}}"
+    wx:key="id">
+        <image class="" src="{{item.pics_mid}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    </swiper-item>
+</swiper>
+</view>
+<!-- 轮播图区域结束 -->
+
+<!-- 价格区域开始 -->
+<view class="price">
+    ￥{{goodsObj.goods_price}}
+</view>
+<!-- 价格区域结束 -->
+
+<!-- 商品名称行开始 -->
+<view class="goods_name_row">
+    <view class="goods_name">
+    {{goodsObj.goods_name}}
+    </view>
+    <view class="goods_collect">
+        <text class="iconfont icon-shoucang"></text> 
+        <view class="collect_text">收藏</view>
+    </view>
+</view>
+<!-- 商品名称行结束 -->
+
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content" >
+        <rich-text nodes="{{goodsObj.goods_introduce}}">
+            
+        </rich-text>
+    </view>
+</view>

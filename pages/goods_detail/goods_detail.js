@@ -18,12 +18,21 @@ Page({
   },
   //定义获取商品详情数据的方法
   async getGoodsDetail(goods_id) {
-    const goodsObj = await request({
+    const res = await request({
       url: "/goods/detail",
       data: {goods_id}
     });
+    console.log(res.data.message.goods_price);
     this.setData({
-      goodsObj
+      goodsObj:{
+        //只回传用到的数据
+        goods_name: res.data.message.goods_name,
+        pics: res.data.message.pics,
+        goods_price: res.data.message.goods_price,
+        //将 webp 改成 jpg
+        goods_introduce: res.data.message.goods_introduce.replace(/\.webp/g,'.jpg')
+      }
     })
+
   }
 })
