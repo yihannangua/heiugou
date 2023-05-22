@@ -1,9 +1,9 @@
 /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
   font-family: "iconfont"; /* Project id 4043398 */
-  src: url('//at.alicdn.com/t/c/font_4043398_tutfdqisyhg.woff2?t=1684331744791') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4043398_tutfdqisyhg.woff?t=1684331744791') format('woff'),
-       url('//at.alicdn.com/t/c/font_4043398_tutfdqisyhg.ttf?t=1684331744791') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4043398_5g9pu846hpm.woff2?t=1684760951915') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4043398_5g9pu846hpm.woff?t=1684760951915') format('woff'),
+       url('//at.alicdn.com/t/c/font_4043398_5g9pu846hpm.ttf?t=1684760951915') format('truetype');
 }
 
 .iconfont {
@@ -12,6 +12,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche:before {
+  content: "\e899";
+}
+
+.icon-kefu:before {
+  content: "\e625";
+}
+
+.icon-fenxiang:before {
+  content: "\eb24";
 }
 
 .icon-shoucang:before {
